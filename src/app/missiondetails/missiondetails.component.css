@@ -1,0 +1,36 @@
+.outer {
+  max-width: 1200px;
+  width: 90%;
+  border: solid;
+  margin: auto;
+  padding: 20px;
+}
+.header {
+  padding: 20px;
+  font-size: 40px;
+  text-align: center;
+}
+h1 {
+  font-weight: bold;
+}
+.card {
+   background-color: #748096;
+   padding: 20px;
+   margin-top: 20px;
+}
+.rocket {
+  float: left;
+  max-width: 500px;
+  margin-right: 15px;
+}
+a {
+  margin: 10px;
+}
+h2 {
+  color: #0000c9;
+  font-weight: bold;
+}
+h4 {
+  color: #000000;
+  font-weight: bold;
+}

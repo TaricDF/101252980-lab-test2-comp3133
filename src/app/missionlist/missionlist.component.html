@@ -1,0 +1,32 @@
+<div class="bgcolor">
+    <h1>SpaceX Mission List</h1>
+    <div class="missionsPage">
+        <div class="filterYear" style="width: 12rem;">
+            <div class="card">
+                <div class="card-header" style="text-align: center;">Launch Year</div>
+                <div class="card-body">
+                    <div *ngFor="let year of years" class="year">
+                        <a (click)="missionfilter(year)" class="btn">{{year}}</a>
+                    </div>
+                    <div class="year">
+                        <a (click)="getAllMissions()" class="btn">All</a>
+                    </div>
+                </div>
+              </div>
+        </div>
+        <div class="missions">
+            <div *ngFor="let mission of missionList" class="card mission">
+                <img src="{{mission.links.mission_patch_small}}" 
+                    class="card-img-top img-thumbnail" alt="Mission image cap"/>
+                <div class="card-body">
+                    <h5 class="card-title">{{mission.mission_name}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{mission.launch_year}}</h6>
+                    <p class="card-text">{{mission.details}}</p>
+                    <a [routerLink]="['/details/', mission.flight_number]" [state]="{ flight_Num: mission.flight_number}"
+                    class="btn btn-primary">More details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

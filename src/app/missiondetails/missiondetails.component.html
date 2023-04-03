@@ -1,0 +1,44 @@
+<br>
+<div class="outer">
+    <div class="header">
+        <h1>SpaceX Mission Details</h1>
+    </div>
+    <div class="row">
+        <div class="card">
+            <div class="format">
+                <img class="rocket" src="{{mission.links.mission_patch_small}}" alt="Mission image"/>
+                <h2>Mission - {{mission.mission_name}}</h2>
+                <h6>Name: {{mission.mission_name}}</h6>
+                <h6>Launch Year: {{mission.launch_year}}</h6>
+                <h4>Rocket</h4>
+                <h6>Name: {{mission.rocket.rocket_name}}</h6>
+                <h6>Type: {{mission.rocket.rocket_type}}</h6>
+                <h4>Launch Site</h4>
+                <h6>Name: {{mission.launch_site.site_name_long}}</h6>
+                <br>
+                <h4>Launch Details</h4>
+                <h5 *ngIf="mission.launch_success; else fail">Launch Success</h5>
+                <ng-template #fail><h5>Launch Fail</h5></ng-template>
+                <p>{{mission.details}}</p>
+                <div>
+                    <h4>More Info</h4>
+                    <a href="{{mission.links.wikipedia}}" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/800px-Wikipedia-logo-v2.svg.png" 
+                        alt="Wikipedia"
+                        style="max-height: 25px;">
+                    </a>
+                    <a href="{{mission.links.video_link}}" target="_blank">
+                        <img src="https://www.freepnglogos.com/uploads/youtube-logo-png-transparent-background-download-3.png"
+                        alt="Video"
+                        style="max-height: 25px;">
+                    </a>
+                    <a href="{{mission.links.article_link}}" target="_blank">
+                        <img src="https://cdn.iconscout.com/icon/free/png-512/article-1767419-1505279.png?f=avif&w=256" 
+                        alt="Article"
+                        style="max-height: 25px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
